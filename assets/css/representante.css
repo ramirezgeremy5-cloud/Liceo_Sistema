@@ -1,0 +1,526 @@
+/* ========================================
+   Módulo Representante - Estilos
+   ======================================== */
+
+/* Alertas */
+.alert {
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-exito {
+    background: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+}
+
+.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.alert-advertencia {
+    background: #fef3c7;
+    color: #92400e;
+    border-left: 4px solid #f59e0b;
+}
+
+.alert::before {
+    content: '';
+    display: inline-block;
+}
+
+/* Sistema de Pestañas */
+.tabs-nav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--color-border);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+    color: var(--color-primary);
+}
+
+.tab-btn.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-secondary);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección Información General */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.info-card.large {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.info-card.large:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.info-header svg {
+    color: var(--color-secondary);
+}
+
+.info-header h3 {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-details p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.info-details strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Sección Horarios */
+.horarios-section {
+    display: grid;
+    gap: 32px;
+}
+
+.upload-card {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    border-radius: 12px;
+    padding: 32px;
+    color: white;
+}
+
+.upload-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-upload {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Horarios disponibles */
+.horarios-list {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+}
+
+.horarios-list h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.horarios-table {
+    overflow-x: auto;
+}
+
+.horarios-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.horarios-table thead {
+    background: var(--color-background);
+    border-bottom: 2px solid var(--color-border);
+}
+
+.horarios-table th {
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.horarios-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+.horarios-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.horarios-table tbody tr:hover {
+    background: var(--color-background);
+}
+
+.horarios-table td svg {
+    margin-right: 8px;
+    vertical-align: middle;
+    color: var(--color-secondary);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--color-text-light);
+}
+
+.empty-state svg {
+    color: var(--color-border);
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Sección Descargas */
+.descargas-section {
+    display: grid;
+    gap: 32px;
+}
+
+.download-card {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-secondary);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.download-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.download-info {
+    flex: 1;
+}
+
+.download-info h3 {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin: 0 0 4px 0;
+}
+
+.download-info p {
+    margin: 4px 0;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.download-info .file-info {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.info-card-downloads {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border);
+}
+
+.info-card-downloads h3 {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: var(--color-background);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-secondary);
+    transition: all 0.2s ease;
+}
+
+.document-list li:hover {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%);
+}
+
+.document-list li span {
+    font-weight: 500;
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-small {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.btn-large {
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+}
+
+.btn-outline:hover {
+    background: var(--color-secondary);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .download-card .download-info {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs-nav {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+
+    .upload-card {
+        padding: 20px;
+    }
+
+    .form-upload {
+        flex-direction: column;
+    }
+
+    .form-group {
+        min-width: auto;
+    }
+
+    .horarios-list,
+    .download-card,
+    .info-card.large {
+        padding: 20px;
+    }
+
+    .info-header h3,
+    .horarios-list h3,
+    .info-card-downloads h3 {
+        font-size: 1.05rem;
+    }
+
+    .download-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs-nav {
+        gap: 4px;
+    }
+
+    .tab-btn {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .tab-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .horarios-table {
+        font-size: 0.8rem;
+    }
+
+    .horarios-table th,
+    .horarios-table td {
+        padding: 10px 8px;
+    }
+
+    .info-details p {
+        font-size: 0.9rem;
+    }
+
+    .document-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

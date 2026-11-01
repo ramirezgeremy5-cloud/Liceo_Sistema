@@ -1,0 +1,63 @@
+{
+    "organizaciones": [
+        {
+            "id": 1,
+            "nombre": "Hospital Central",
+            "direccion": "Avenida Principal, Centro M\u00e9dico",
+            "icono": "fa-solid fa-hospital",
+            "desc": "Centro de salud local. Apoyo en \u00e1reas administrativas."
+        },
+        {
+            "id": 2,
+            "nombre": "Comunidad Plata 2",
+            "direccion": "Sector Plata 2, Cancha M\u00faltiple",
+            "icono": "fa-solid fa-people-roof",
+            "desc": "Atenci\u00f3n social y censo comunitario."
+        },
+        {
+            "id": 4,
+            "nombre": "Actividades E.T.P.G.L.",
+            "direccion": "Sede Principal del Liceo",
+            "icono": "fa-solid fa-school",
+            "desc": "Apoyo institucional, limpieza y mantenimiento."
+        }
+    ],
+    "registros_labor": [
+        {
+            "id": 1783879426,
+            "estudiante": "Carlos Ruiz",
+            "org_id": "1",
+            "horas": "120",
+            "fecha_inicio": "0047-05-12",
+            "fecha_fin": "0005-04-05",
+            "estado": "Finalizado"
+        },
+        {
+            "id": 1783879482,
+            "estudiante": "Pedro Guedez",
+            "org_id": "2",
+            "horas": "120",
+            "fecha_inicio": "0002-04-01",
+            "fecha_fin": "0002-02-04",
+            "estado": "Finalizado"
+        },
+        {
+            "id": 1784259768,
+            "estudiante": "Laura Martinez",
+            "org_id": "3",
+            "horas": "120",
+            "fecha_inicio": "2026-07-29",
+            "fecha_fin": "2026-07-27",
+            "estado": "Finalizado"
+        },
+        {
+            "id": 1784407809,
+            "estudiante": "Feliz Alfonzo",
+            "org_id": "1",
+            "horas": "120",
+            "fecha_inicio": "0002-06-15",
+            "fecha_fin": "0004-06-05",
+            "estado": "Finalizado"
+        }
+    ]
+}
